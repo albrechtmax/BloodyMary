@@ -4,32 +4,28 @@ using UnityEngine;
 
 public class BloodDrop : MonoBehaviour
 {
-    public float fallSpeed = 10.0f;
+    public float fallSpeed = 3.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.down * fallSpeed;
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() { }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        transform.Translate(Vector2.down * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        
-         // Check if the other object has a PlayerController2D component
-        // if (other.GetComponent<PlayerController2D>() != null) {
-            
-        //     // Destroy the collectible
-        //     Destroy(gameObject);
-
-        //     // Instantiate the particle effect
-        //     Instantiate(onCollectEffect, transform.position, transform.rotation);
-        // }
-
-        
+        if (other.gameObject.name == "BloodBath")
+        {
+            Destroy(gameObject);
+            // we effectively hit the player, reduce some HP counter or whatever
+        }
+        else
+        {
+            Destroy(gameObject);
+            // we were hit by projectile, increment some point counter or whetever
+        }
     }
 }

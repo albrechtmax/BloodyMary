@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6595030543614710032}
   - component: {fileID: 4404420343512592571}
   - component: {fileID: 7599574844435437601}
+  - component: {fileID: 3449353845834413977}
   m_Layer: 0
   m_Name: BloodDrop
   m_TagString: Untagged
@@ -106,7 +107,7 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -143,3 +144,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   fallSpeed: 10
+--- !u!50 &3449353845834413977
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784492988835689554}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
