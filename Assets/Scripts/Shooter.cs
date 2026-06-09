@@ -1,11 +1,23 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Shooter : MonoBehaviour
 {
-    public int score = 0;
+    private int _score = 0;
+    public int score
+    {
+        get => _score;
+        set
+        {
+            _score = value;
+            scoreLabel.text = "Score: " + _score;
+        }
+    }
 
     public GameObject bloodProjectileScene;
+    public Text scoreLabel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() { }
