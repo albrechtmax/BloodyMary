@@ -22,7 +22,9 @@ public class BloodSpawner : MonoBehaviour
     {
         if (Time.fixedTime - lastUpdate > period)
         {
-            Instantiate(bloodDropScene, GetRandomPosition(), transform.rotation);
+            GameObject drop = Instantiate(bloodDropScene, GetRandomPosition(), transform.rotation);
+            drop.GetComponent<BloodDrop>().bloodGroup = BloodGroup.GetRandom();
+            drop.GetComponent<Rigidbody2D>().linearVelocity = Vector2.down * 1.0f;
             lastUpdate = Time.fixedTime;
         }
 

@@ -587,63 +587,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 838720650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5980878091498486465
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471481024256971676, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2784492988835689554, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-      propertyPath: m_Name
-      value: BloodDrop
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -651,5 +594,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 838720650}
-  - {fileID: 5980878091498486465}
   - {fileID: 1207351739}

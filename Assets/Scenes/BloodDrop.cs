@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class BloodDrop : MonoBehaviour
 {
-    public float fallSpeed = 3.0f;
+    public BloodGroup bloodGroup;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        GetComponent<Rigidbody2D>().linearVelocity = Vector2.down * fallSpeed;
-    }
+    void Start() { }
 
     // Update is called once per frame
     void Update() { }
