@@ -104,3 +104,7 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# appears to be output for web build but cant find documentation for it
+# (contains one generated cpp and binary wasm file for me)
+/[Dd]ata/
