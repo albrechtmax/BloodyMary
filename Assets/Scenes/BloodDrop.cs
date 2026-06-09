@@ -16,13 +16,23 @@ public class BloodDrop : MonoBehaviour
     {
         if (other.gameObject.name == "BloodBath")
         {
-            Destroy(gameObject);
             // we effectively hit the player, reduce some HP counter or whatever
+            Destroy(gameObject);
+            Shooter shooter = FindAnyObjectByType<Shooter>();
+            shooter.score -= 1;
+        }
+        else if (other.gameObject.CompareTag("BloodProjectile"))
+        {
+            // we were hit by projectile, increment some point counter or whetever
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+
+            Shooter shooter = FindAnyObjectByType<Shooter>();
+            shooter.score += 1;
         }
         else
         {
-            Destroy(gameObject);
-            // we were hit by projectile, increment some point counter or whetever
+            // ¯\_(ツ)_/¯
         }
     }
 }
