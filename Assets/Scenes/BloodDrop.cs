@@ -30,6 +30,14 @@ public class BloodDrop : MonoBehaviour
             Shooter shooter = FindAnyObjectByType<Shooter>();
             shooter.score += 1;
         }
+        else if (other.gameObject.CompareTag("BloodDrop"))
+        {
+            GameObject higher = other.transform.position.y > transform.position.y ? other.gameObject : gameObject;
+            GameObject lower = higher == gameObject ? other.gameObject : gameObject;
+
+            float shift = lower.GetComponent<Collider2D>().bounds.max.y - higher.GetComponent<Collider2D>().bounds.min.y;
+            higher.transform.position += shift * Vector3.up;
+        }
         else
         {
             // ¯\_(ツ)_/¯
