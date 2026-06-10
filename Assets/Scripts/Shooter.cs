@@ -12,7 +12,7 @@ public class Shooter : MonoBehaviour
         set
         {
             _score = value;
-            scoreLabel.text = "Score: " + _score;
+            scoreLabel.text = "" + _score;
         }
     }
 
