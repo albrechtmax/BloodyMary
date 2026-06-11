@@ -40,6 +40,8 @@ public class Shooter : MonoBehaviour
             proj.transform.position = target.position;
             proj.transform.up = transform.up;
             proj.GetComponent<Rigidbody2D>().linearVelocity = transform.up * 10.0f;
+
+            GetComponent<AudioSource>().Play();
         }
     }
 }

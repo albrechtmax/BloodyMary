@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class BloodDrop : MonoBehaviour
 {
     public BloodGroup bloodGroup;
+    public AudioClip audioGood;
+    public AudioClip audioBad;
 
     void Start()
     {
@@ -24,13 +26,13 @@ public class BloodDrop : MonoBehaviour
                 // correct donation
                 GetComponent<SpriteRenderer>().color = Color.green;
                 shooter.score += 1;
-                // TODO play eat/positive/... sound
+                GetComponent<AudioSource>().PlayOneShot(audioGood);
             }
             else
             {
                 GetComponent<SpriteRenderer>().color = Color.red;
                 shooter.score -= 1;
-                // TODO play hit/negative/... sound
+                GetComponent<AudioSource>().PlayOneShot(audioBad);
             }
             StartCoroutine(TimedDestroy(4)); // long enough to fall out of the screen
         }
