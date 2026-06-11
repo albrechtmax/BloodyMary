@@ -19,6 +19,8 @@ public class Shooter : MonoBehaviour
     public GameObject bloodProjectileScene;
     public Text scoreLabel;
 
+    public BloodGroup bloodGroup = BloodGroup.A;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() { }
 
