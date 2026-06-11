@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
@@ -42,5 +43,21 @@ public class LevelUI : MonoBehaviour
     {
         transform.Find("PauseMenu").gameObject.SetActive(false);
         Time.timeScale = 1.0f;
+    }
+
+    public void ButtonMutePressed()
+    {
+        var buttonMute = transform.Find("PauseMenu").Find("ButtonMute");
+        var textComponent = buttonMute.GetComponentInChildren<Text>();
+        if (AudioListener.volume == 0.0f)
+        {
+            textComponent.text = "Mute";
+            AudioListener.volume = 1.0f;
+        }
+        else
+        {
+            textComponent.text = "Unmute";
+            AudioListener.volume = 0.0f;
+        }
     }
 }
