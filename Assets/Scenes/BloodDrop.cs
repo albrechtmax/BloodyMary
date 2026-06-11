@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,9 +12,33 @@ public class BloodDrop : MonoBehaviour
     public AudioClip audioGood;
     public AudioClip audioBad;
 
+    [Header("Sprites for different blood groups")]
+    public Sprite spriteOp;
+    public Sprite spriteOn;
+    public Sprite spriteAp;
+    public Sprite spriteAn;
+    public Sprite spriteBp;
+    public Sprite spriteBn;
+    public Sprite spriteABp;
+    public Sprite spriteABn;
+
     void Start()
     {
         transform.Find("Text").GetComponent<TextMesh>().text = bloodGroup.ToString();
+        Sprite sprite;
+        switch (bloodGroup.ToString())
+        {
+            case "O+": sprite = spriteOp; break;
+            case "O-": sprite = spriteOn; break;
+            case "A+": sprite = spriteAp; break;
+            case "A-": sprite = spriteAn; break;
+            case "B+": sprite = spriteBp; break;
+            case "B-": sprite = spriteBn; break;
+            case "AB+": sprite = spriteABp; break;
+            case "AB-": sprite = spriteABn; break;
+            default: throw new ArgumentOutOfRangeException();
+        }
+        GetComponent<SpriteRenderer>().sprite = sprite;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
