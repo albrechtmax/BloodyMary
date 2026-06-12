@@ -24,7 +24,6 @@ public class BloodDrop : MonoBehaviour
 
     void Start()
     {
-        transform.Find("Text").GetComponent<TextMesh>().text = bloodGroup.ToString();
         Sprite sprite;
         switch (bloodGroup.ToString())
         {
