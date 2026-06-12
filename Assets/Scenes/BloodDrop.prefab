@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   audioGood: {fileID: 8300000, guid: e5a8ea92f2b7823dfbf9695d66fd40d5, type: 3}
   audioBad: {fileID: 8300000, guid: a546a0a0cc8ea3d23bed9484ba81fd07, type: 3}
+  splatter: {fileID: 781494319437489235, guid: e626335609866a34e99a919e7355859b, type: 3}
   spriteOp: {fileID: 21300000, guid: caf32c363b126f54e9b53d36f4ca7d97, type: 3}
   spriteOn: {fileID: 21300000, guid: 22da676cc691e7548b1232254607d19e, type: 3}
   spriteAp: {fileID: 21300000, guid: 087b0b4748bfd6441b5edda71c0402b4, type: 3}

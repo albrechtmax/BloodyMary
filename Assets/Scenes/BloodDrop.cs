@@ -1,17 +1,13 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.SqlTypes;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BloodDrop : MonoBehaviour
 {
     public BloodGroup bloodGroup;
     public AudioClip audioGood;
     public AudioClip audioBad;
+    public GameObject splatter;
 
     [Header("Sprites for different blood groups")]
     public Sprite spriteOp;
@@ -96,7 +92,10 @@ public class BloodDrop : MonoBehaviour
 
             Destroy(gameObject);
             Destroy(other.gameObject);
-            // TODO play some animation
+            var splatterInstance = Instantiate(splatter);
+            splatterInstance.transform.position = transform.position;
+            var ps = splatterInstance.GetComponent<ParticleSystem>();
+            Destroy(splatterInstance, ps.main.duration + ps.main.startLifetime.constant);
             // TODO play sound
         }
         else if (other.gameObject.CompareTag("BloodDrop"))
