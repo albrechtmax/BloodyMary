@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+// for drop down menu in editor
 public enum BloodGroupProxy
 {
     OMinus,
@@ -39,6 +40,7 @@ public class Shooter : MonoBehaviour
         set
         {
             _health = value;
+            if (health > maxHealth) health = maxHealth; // cap health
             UpdateHealthbar();
         }
     }
@@ -57,12 +59,12 @@ public class Shooter : MonoBehaviour
         {
             case BloodGroupProxy.OMinus: bloodGroup = BloodGroup.O; break;
             case BloodGroupProxy.OPlus: bloodGroup = BloodGroup.Op; break;
-            case BloodGroupProxy.APlus: bloodGroup = BloodGroup.A; break;
-            case BloodGroupProxy.AMinus: bloodGroup = BloodGroup.Ap; break;
-            case BloodGroupProxy.BPlus: bloodGroup = BloodGroup.B; break;
-            case BloodGroupProxy.BMinus: bloodGroup = BloodGroup.Bp; break;
-            case BloodGroupProxy.ABPlus: bloodGroup = BloodGroup.AB; break;
-            case BloodGroupProxy.ABMinus: bloodGroup = BloodGroup.ABp; break;
+            case BloodGroupProxy.AMinus: bloodGroup = BloodGroup.A; break;
+            case BloodGroupProxy.APlus: bloodGroup = BloodGroup.Ap; break;
+            case BloodGroupProxy.BMinus: bloodGroup = BloodGroup.B; break;
+            case BloodGroupProxy.BPlus: bloodGroup = BloodGroup.Bp; break;
+            case BloodGroupProxy.ABMinus: bloodGroup = BloodGroup.AB; break;
+            case BloodGroupProxy.ABPlus: bloodGroup = BloodGroup.ABp; break;
         }
         health = startHealth;
     }
