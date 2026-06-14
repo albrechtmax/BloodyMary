@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
+    public void Start()
+    {
+        // to reset after retry, and after scene is actually loaded
+        Time.timeScale = 1.0f;
+    }
+
     public void ButtonPausePressed()
     {
         TogglePauseState();
@@ -59,5 +65,17 @@ public class LevelUI : MonoBehaviour
             textComponent.text = "Unmute";
             AudioListener.volume = 0.0f;
         }
+    }
+
+    public void OnHealthEmpty()
+    {
+        Time.timeScale = 0.0f;
+        transform.Find("GameOverScreen").gameObject.SetActive(true);
+        transform.Find("TopBar").Find("ButtonPause").gameObject.SetActive(false);
+    }
+
+    public void OnRetryPressed()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
