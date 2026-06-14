@@ -1,5 +1,6 @@
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -40,7 +41,16 @@ public class Shooter : MonoBehaviour
         set
         {
             _health = value;
-            if (health > maxHealth) health = maxHealth; // cap health
+            if (health > maxHealth)
+            {
+                health = maxHealth; // cap health
+                if (onHealthFull != null) onHealthFull.Invoke();
+            }
+            if (health < 0)
+            {
+                health = 0;
+                if (onHealthEmpty != null) onHealthEmpty.Invoke();
+            }
             UpdateHealthbar();
         }
     }
@@ -51,6 +61,9 @@ public class Shooter : MonoBehaviour
 
     public BloodGroupProxy chooseBloodGroup = BloodGroupProxy.APlus;
     public BloodGroup bloodGroup = BloodGroup.Ap;
+
+    public UnityEvent onHealthFull;
+    public UnityEvent onHealthEmpty;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
