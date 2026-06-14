@@ -271,7 +271,7 @@ MonoBehaviour:
   - {fileID: 1314808346, guid: fc53812157421a740b80492215c30c47, type: 3}
   - {fileID: -1030670949, guid: fc53812157421a740b80492215c30c47, type: 3}
   - {fileID: 687891111, guid: fc53812157421a740b80492215c30c47, type: 3}
-  nextScene: {fileID: 102900000, guid: 1a97e2a668b23f3419b0a1037240df7a, type: 3}
+  nextScene: {fileID: 0}
 --- !u!114 &267759880
 MonoBehaviour:
   m_ObjectHideFlags: 0
