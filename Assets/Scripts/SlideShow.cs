@@ -1,4 +1,3 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,7 +6,7 @@ public class SlideShow : MonoBehaviour
 {
     public Sprite[] slides;
     private int slideIndex = 0;
-    public SceneAsset nextScene;
+    public string nextScene;
 
     void Start()
     {
@@ -20,7 +19,7 @@ public class SlideShow : MonoBehaviour
 
         if (slideIndex == 0 && nextScene != null)
         {
-            SceneManager.LoadScene(nextScene.name);
+            SceneManager.LoadScene(nextScene);
         }
         else
         {

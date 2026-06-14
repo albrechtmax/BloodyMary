@@ -276,7 +276,7 @@ MonoBehaviour:
   - {fileID: -1864050564, guid: f761838df25f9b84fb9d3053e483ca17, type: 3}
   - {fileID: -2025815956, guid: f761838df25f9b84fb9d3053e483ca17, type: 3}
   - {fileID: -28583738, guid: f761838df25f9b84fb9d3053e483ca17, type: 3}
-  nextScene: {fileID: 102900000, guid: 1a97e2a668b23f3419b0a1037240df7a, type: 3}
+  nextScene: Level1
 --- !u!114 &267759880
 MonoBehaviour:
   m_ObjectHideFlags: 0
