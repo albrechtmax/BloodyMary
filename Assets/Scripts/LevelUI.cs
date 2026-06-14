@@ -57,12 +57,12 @@ public class LevelUI : MonoBehaviour
         var textComponent = buttonMute.GetComponentInChildren<Text>();
         if (AudioListener.volume == 0.0f)
         {
-            textComponent.text = "Mute";
+            textComponent.text = "Ton aus";
             AudioListener.volume = 1.0f;
         }
         else
         {
-            textComponent.text = "Unmute";
+            textComponent.text = "Ton an";
             AudioListener.volume = 0.0f;
         }
     }

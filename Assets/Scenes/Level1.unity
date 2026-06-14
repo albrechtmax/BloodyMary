@@ -1348,7 +1348,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 12653842769947847, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_Text
-      value: Mute
+      value: Ton aus
       objectReference: {fileID: 0}
     - target: {fileID: 4003325943646524410, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_Name
@@ -1408,7 +1408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6200697343112541753, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 130.736
       objectReference: {fileID: 0}
     - target: {fileID: 6200697343112541753, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2126,7 +2126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your health dropped to zero
+  m_Text: Deine Leben ist auf Null gesunken
 --- !u!222 &1499813887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2145,7 +2145,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 12653842769947847, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_Text
-      value: Resume
+      value: Weiterspielen
       objectReference: {fileID: 0}
     - target: {fileID: 4003325943646524410, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_Name
@@ -2205,7 +2205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6200697343112541753, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120
+      value: 237.82
       objectReference: {fileID: 0}
     - target: {fileID: 6200697343112541753, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2370,7 +2370,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 12653842769947847, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_Text
-      value: Retry
+      value: Neustarten
       objectReference: {fileID: 0}
     - target: {fileID: 4003325943646524410, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_Name
@@ -2430,7 +2430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6200697343112541753, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 148.647
+      value: 256.222
       objectReference: {fileID: 0}
     - target: {fileID: 6200697343112541753, guid: 8a5eaef907891904d918278ccc928bd4, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2696,7 +2696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game paused
+  m_Text: Pause
 --- !u!222 &1606287402
 CanvasRenderer:
   m_ObjectHideFlags: 0
