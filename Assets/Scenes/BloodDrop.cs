@@ -23,6 +23,9 @@ public class BloodDrop : MonoBehaviour
     public Sprite spriteABp;
     public Sprite spriteABn;
 
+    private bool isFadingOut = false;
+    private float fadeOutStart, fadeOutEnd;
+
     void Start()
     {
         Sprite sprite;
@@ -39,6 +42,18 @@ public class BloodDrop : MonoBehaviour
             default: throw new ArgumentOutOfRangeException();
         }
         GetComponent<SpriteRenderer>().sprite = sprite;
+    }
+
+    void Update()
+    {
+        if (isFadingOut)
+        {
+            var t = (Time.unscaledTime - fadeOutStart) / (fadeOutEnd - fadeOutStart);
+            var renderer = GetComponent<SpriteRenderer>();
+            var color = renderer.color;
+            color.a = 1 - t;
+            renderer.color = color;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -62,7 +77,7 @@ public class BloodDrop : MonoBehaviour
                 shooter.health -= 10;
                 GetComponent<AudioSource>().PlayOneShot(audioBad);
             }
-            StartCoroutine(TimedDestroy(4)); // long enough to fall out of the screen
+            StartCoroutine(FadeOutDestroy(1)); // long enough to fall out of the screen
         }
         else if (other.gameObject.CompareTag("BloodProjectile"))
         {
@@ -97,9 +112,12 @@ public class BloodDrop : MonoBehaviour
         }
     }
 
-    private IEnumerator TimedDestroy(float after)
+    private IEnumerator FadeOutDestroy(float after)
     {
         Destroy(GetComponent<Collider2D>());
+        isFadingOut = true;
+        fadeOutStart = Time.unscaledTime;
+        fadeOutEnd = Time.unscaledTime + after;
         yield return new WaitForSeconds(after);
         Destroy(gameObject);
     }
