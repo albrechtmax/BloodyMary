@@ -1056,8 +1056,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6e8b5cc041c1949bc4510b76f5832e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  healthBar: {fileID: 807452000028327568}
+  maxHealth: 100
+  startHealth: 50
   bloodProjectileScene: {fileID: 3298725085481208059, guid: 48e9d6f2bccde714ab54538f66e98497, type: 3}
   scoreLabel: {fileID: 1469647768}
+  chooseBloodGroup: 2
 --- !u!212 &601173926
 SpriteRenderer:
   serializedVersion: 2
@@ -2579,13 +2583,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8299125065157205581, guid: 17ba4a2c3ef14a145a95ed31f1fa6c06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 807452000028327569}
   m_SourcePrefab: {fileID: 100100000, guid: 17ba4a2c3ef14a145a95ed31f1fa6c06, type: 3}
 --- !u!224 &807452000028327567 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 75559399189956606, guid: 17ba4a2c3ef14a145a95ed31f1fa6c06, type: 3}
   m_PrefabInstance: {fileID: 807452000028327566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &807452000028327568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8299125065157205581, guid: 17ba4a2c3ef14a145a95ed31f1fa6c06, type: 3}
+  m_PrefabInstance: {fileID: 807452000028327566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &807452000028327569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807452000028327568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09e3bef6da8f6849a7823a9ca1b03a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

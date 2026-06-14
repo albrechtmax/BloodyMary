@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlTypes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,22 +43,23 @@ public class BloodDrop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Shooter shooter = FindAnyObjectByType<Shooter>();
         if (other.gameObject.name == "BloodBath")
         {
             // we effectively hit the player, reduce some HP counter or whatever
-            Shooter shooter = FindAnyObjectByType<Shooter>();
 
             if (shooter.bloodGroup.CanGetDontationFrom(bloodGroup))
             {
                 // correct donation
                 GetComponent<SpriteRenderer>().color = Color.green;
-                shooter.score += 1;
+                shooter.score += 100;
+                shooter.health += 10;
                 GetComponent<AudioSource>().PlayOneShot(audioGood);
             }
             else
             {
                 GetComponent<SpriteRenderer>().color = Color.red;
-                shooter.score -= 1;
+                shooter.health -= 10;
                 GetComponent<AudioSource>().PlayOneShot(audioBad);
             }
             StartCoroutine(TimedDestroy(4)); // long enough to fall out of the screen
@@ -65,6 +67,17 @@ public class BloodDrop : MonoBehaviour
         else if (other.gameObject.CompareTag("BloodProjectile"))
         {
             // we were hit by projectile, increment some point counter or whetever
+            if (shooter.bloodGroup.CanGetDontationFrom(bloodGroup))
+            {
+                // destroyed good blood
+                shooter.score += 10;
+            }
+            else
+            {
+                // destroyed bad blood
+                shooter.score += 50;
+            }
+
             Destroy(gameObject);
             Destroy(other.gameObject);
             // TODO play some animation
