@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
+    public string nextLevel;
+    public string explanationLevel;
+
     public void Start()
     {
         // to reset after retry, and after scene is actually loaded
@@ -77,5 +80,20 @@ public class LevelUI : MonoBehaviour
     public void OnRetryPressed()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OnTimeout()
+    {
+        Shooter shooter = FindAnyObjectByType<Shooter>();
+        Time.timeScale = 0.0f;
+
+        var gameWon = transform.Find("GameWonScreen");
+        gameWon.Find("TextGameOverExplain").GetComponent<Text>().text = $"Punkte: {shooter.score}";
+        gameWon.gameObject.SetActive(true);
+    }
+
+    public void OnNextPressed()
+    {
+        SceneManager.LoadScene(nextLevel);
     }
 }
