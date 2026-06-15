@@ -68,7 +68,7 @@ public class BloodDrop : MonoBehaviour
                 // correct donation
                 GetComponent<SpriteRenderer>().color = Color.green;
                 shooter.score += 100;
-                shooter.health += 10;
+                shooter.health += 5;
                 GetComponent<AudioSource>().PlayOneShot(audioGood);
             }
             else
