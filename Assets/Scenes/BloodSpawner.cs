@@ -8,7 +8,8 @@ public enum SpawnerPreset
 {
     Level1, // only A+ and B+
     Level2, // O+, A+, B+, AB+;
-    Level3, // all
+    Level3, // A, A+, B, B+
+    Level4  // all
 }
 
 public class BloodSpawner : MonoBehaviour
@@ -52,7 +53,8 @@ static class SpawnerPresetMethods
 {
     public static readonly List<BloodGroup> bloodGroupsLevel1 = new List<BloodGroup> { BloodGroup.Ap, BloodGroup.Bp };
     public static readonly List<BloodGroup> bloodGroupsLevel2 = new List<BloodGroup> { BloodGroup.Op, BloodGroup.Ap, BloodGroup.Bp, BloodGroup.ABp };
-    public static readonly List<BloodGroup> bloodGroupsLevel3 = BloodGroup.Iter();
+    public static readonly List<BloodGroup> bloodGroupsLevel3 = new List<BloodGroup> { BloodGroup.A, BloodGroup.Ap, BloodGroup.B, BloodGroup.Bp };
+    public static readonly List<BloodGroup> bloodGroupsLevel4 = BloodGroup.Iter();
 
     public static List<BloodGroup> GetAvailable(this SpawnerPreset preset)
     {
@@ -61,6 +63,7 @@ static class SpawnerPresetMethods
             case SpawnerPreset.Level1: return bloodGroupsLevel1;
             case SpawnerPreset.Level2: return bloodGroupsLevel2;
             case SpawnerPreset.Level3: return bloodGroupsLevel3;
+            case SpawnerPreset.Level4: return bloodGroupsLevel4;
             default: throw new ArgumentOutOfRangeException();
         }
 

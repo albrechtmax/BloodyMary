@@ -376,8 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9806b28dfb9e4d44d973af6caa92d40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  nextLevel: Level4
-  explanationLevel: Intro2
+  nextLevel: DemoOver
+  explanationLevel: 
 --- !u!1 &129037798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   bloodDropScene: {fileID: 2784492988835689554, guid: 7da292e3b6ee05665981d7b5db6b635f, type: 3}
-  preset: 2
+  preset: 3
 --- !u!1 &857983762
 GameObject:
   m_ObjectHideFlags: 0
