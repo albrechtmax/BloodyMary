@@ -17,4 +17,9 @@ public class LevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("Intro1");
     }
+
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Intro2");
+    }
 }
