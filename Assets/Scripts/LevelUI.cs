@@ -91,6 +91,8 @@ public class LevelUI : MonoBehaviour
         var gameWon = transform.Find("GameWonScreen");
         gameWon.Find("TextGameOverExplain").GetComponent<Text>().text = $"Punkte: {shooter.score}";
         gameWon.gameObject.SetActive(true);
+
+        transform.Find("SoundWin").GetComponent<AudioSource>().Play();
     }
 
     public void OnNextPressed()
