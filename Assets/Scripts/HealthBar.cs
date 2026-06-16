@@ -7,4 +7,12 @@ public class HealthBar : MonoBehaviour
     {
         transform.Find("HealthFull").GetComponent<Image>().fillAmount = percentage;
     }
+
+    public void ShowDelta(int delta)
+    {
+        Debug.Log($"showing delta = {delta}");
+        GameObject effect = Instantiate(transform.Find("HealthEffect").gameObject, transform);
+        effect.GetComponent<HealthEffect>().delta = delta;
+        effect.SetActive(true);
+    }
 }

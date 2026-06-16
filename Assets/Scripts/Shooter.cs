@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -40,6 +39,7 @@ public class Shooter : MonoBehaviour
         get => _health;
         set
         {
+            var delta = value - _health;
             _health = value;
             if (health > maxHealth)
             {
@@ -52,6 +52,7 @@ public class Shooter : MonoBehaviour
                 if (onHealthEmpty != null) onHealthEmpty.Invoke();
             }
             UpdateHealthbar();
+            healthBar.GetComponent<HealthBar>().ShowDelta(delta);
         }
     }
 
