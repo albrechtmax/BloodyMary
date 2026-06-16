@@ -1440,7 +1440,7 @@ MonoBehaviour:
   startHealth: 50
   bloodProjectileScene: {fileID: 3298725085481208059, guid: 48e9d6f2bccde714ab54538f66e98497, type: 3}
   scoreLabel: {fileID: 1469647768}
-  chooseBloodGroup: 4
+  chooseBloodGroup: 5
   onHealthFull:
     m_PersistentCalls:
       m_Calls: []
