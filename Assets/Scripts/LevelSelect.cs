@@ -27,4 +27,14 @@ public class LevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("Level4");
     }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void LoadLevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 }
