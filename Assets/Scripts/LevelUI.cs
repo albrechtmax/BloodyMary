@@ -11,7 +11,8 @@ public class LevelUI : MonoBehaviour
     public void Start()
     {
         // to reset after retry, and after scene is actually loaded
-        Time.timeScale = 1.0f;
+        if (FindAnyObjectByType<Popup>() == null)
+            Time.timeScale = 1.0f;
     }
 
     public void ButtonPausePressed()
