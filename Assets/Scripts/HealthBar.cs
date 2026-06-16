@@ -10,7 +10,6 @@ public class HealthBar : MonoBehaviour
 
     public void ShowDelta(int delta)
     {
-        Debug.Log($"showing delta = {delta}");
         GameObject effect = Instantiate(transform.Find("HealthEffect").gameObject, transform);
         effect.GetComponent<HealthEffect>().delta = delta;
         effect.SetActive(true);
