@@ -53,8 +53,30 @@ static class SpawnerPresetMethods
 {
     public static readonly List<BloodGroup> bloodGroupsLevel1 = new List<BloodGroup> { BloodGroup.Ap, BloodGroup.Bp };
     public static readonly List<BloodGroup> bloodGroupsLevel2 = new List<BloodGroup> { BloodGroup.Op, BloodGroup.Ap, BloodGroup.Bp, BloodGroup.ABp };
-    public static readonly List<BloodGroup> bloodGroupsLevel3 = new List<BloodGroup> { BloodGroup.A, BloodGroup.Ap, BloodGroup.B, BloodGroup.Bp };
-    public static readonly List<BloodGroup> bloodGroupsLevel4 = BloodGroup.Iter();
+    public static readonly List<BloodGroup> bloodGroupsLevel3 = new List<BloodGroup> {
+        BloodGroup.B,
+        BloodGroup.B,
+        BloodGroup.B,
+
+        BloodGroup.A,
+        BloodGroup.Ap,
+        BloodGroup.Bp
+    };
+    public static readonly List<BloodGroup> bloodGroupsLevel4 = new List<BloodGroup> {
+        BloodGroup.O,
+        BloodGroup.B,
+        BloodGroup.O,
+        BloodGroup.B,
+        BloodGroup.O,
+        BloodGroup.B,
+
+        BloodGroup.A,
+        BloodGroup.Ap,
+        BloodGroup.Bp,
+        BloodGroup.Op,
+        BloodGroup.AB,
+        BloodGroup.ABp
+    };
 
     public static List<BloodGroup> GetAvailable(this SpawnerPreset preset)
     {
