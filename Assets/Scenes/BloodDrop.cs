@@ -67,14 +67,15 @@ public class BloodDrop : MonoBehaviour
             {
                 // correct donation
                 GetComponent<SpriteRenderer>().color = Color.green;
-                shooter.score += 100;
-                shooter.health += 5;
+                shooter.score += Constants.PointsHarvestCompatible;
+                shooter.health += Constants.HealthHarvestCompatible;
                 GetComponent<AudioSource>().PlayOneShot(audioGood);
             }
             else
             {
                 GetComponent<SpriteRenderer>().color = Color.red;
-                shooter.health -= 10;
+                shooter.score += Constants.PointsHarvestIncompatible;
+                shooter.health += Constants.HealthHarvestIncompatible;
                 GetComponent<AudioSource>().PlayOneShot(audioBad);
             }
             StartCoroutine(FadeOutDestroy(1)); // long enough to fall out of the screen
@@ -85,12 +86,12 @@ public class BloodDrop : MonoBehaviour
             if (shooter.bloodGroup.CanGetDontationFrom(bloodGroup))
             {
                 // destroyed good blood
-                shooter.score += 10;
+                shooter.score += Constants.PointsShotCompatible;
             }
             else
             {
                 // destroyed bad blood
-                shooter.score += 50;
+                shooter.score += Constants.PointsShotIncompatible;
             }
 
             Destroy(gameObject);

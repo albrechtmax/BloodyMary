@@ -102,7 +102,7 @@ public class Shooter : MonoBehaviour
             var audioSource = GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioSource.clip);
 
-            health -= 3;
+            health += Constants.HealthShot;
         }
     }
 
