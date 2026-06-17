@@ -275,7 +275,6 @@ MonoBehaviour:
   - {fileID: 1204980399, guid: c162cd9560b26134eaa5a9591ac67d53, type: 3}
   - {fileID: -1621614700, guid: c162cd9560b26134eaa5a9591ac67d53, type: 3}
   - {fileID: -14173578, guid: c162cd9560b26134eaa5a9591ac67d53, type: 3}
-  - {fileID: -1701542644, guid: c162cd9560b26134eaa5a9591ac67d53, type: 3}
   nextScene: Level1
 --- !u!114 &267759880
 MonoBehaviour:
